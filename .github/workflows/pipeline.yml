@@ -20,3 +20,23 @@ jobs:
 
       - name: Run the tests
         run: pytest -q
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch the repository
+        uses: actions/checkout@v4
+        
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          
+      - name: Generate the site
+        run: python build_site.py
+        
+      - name: Keep the generated site
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
