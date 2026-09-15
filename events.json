@@ -1,0 +1,9 @@
+{
+ "club": "ACM Club at CST",
+ "events": [
+ { "title": "Hackathon", "date": "2027-03-01", "venue": "Lab 4" },
+ { "title": "Orientation", "date": "2027-02-14", "venue": "Auditorium" },
+ { "title": "Annual Meeting", "date": "2025-11-02", "venue": "Room 12" },
+ { "title": "Coding Contest", "date": "2027-05-20", "venue": "Lab 2" }
+ ]
+}
