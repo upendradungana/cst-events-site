@@ -9,7 +9,7 @@ def load_events(path):
 
 def upcoming(events, today):
     # Filters out past events and sorts the remaining ones by date
-    future = [e for e in events if e["date"] > today]
+    future = [e for e in events if e["date"] >= today]
     return sorted(future, key=lambda e: e["date"])
 
 def render(events):
